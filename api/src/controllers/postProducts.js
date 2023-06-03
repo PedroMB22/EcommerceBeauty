@@ -11,7 +11,7 @@ module.exports.postProducts = async (req, res) => {
       }
     } catch (err) {
       console.log(err);
-      res.status(500).json({ message: "Error de servidor" });
+      res.status(500).json({ message: "Error del servidor" });
     }
   };
   
