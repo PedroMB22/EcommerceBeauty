@@ -16,7 +16,7 @@ module.exports = (sequelize) => {
       primaryKey: true,
     },
     price: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
     stock: {

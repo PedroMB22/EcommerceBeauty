@@ -3,7 +3,8 @@ const newProductsService = require('../services/postProducts.service.js');
 
 module.exports.postProducts = async (req, res) => {
     try {
-      const Products = await newProductsService.postProductsAsync(req);
+      const {name, image, id, price, stock, description} = req.body; 
+      const Products = await newProductsService.postProductsAsync(name, image, id, price, stock, description);
       if (Products) {
         res.status(200).json(Products);
       } else {

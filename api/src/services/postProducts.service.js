@@ -2,9 +2,8 @@ const { Product } = require('../database/db.js');
 
 let newProductsService = {};
 
-newProductsService.postProductsAsync = async (req) => {
+newProductsService.postProductsAsync = async (name, image, id, price, stock, description) => {
     try {
-        const {name, image, id, price, stock, description} = req.body; 
         const newProduct = await Product.create({
             name,
             image,
