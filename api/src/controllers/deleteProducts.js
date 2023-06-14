@@ -5,7 +5,7 @@ module.exports.deleteProducts = async (req, res) => {
       const { id } = req.params;
       const Products = await deleteProductsService.deleteProductsAsync(id);
       if (Products) {
-        res.status(200).json(Products);
+        res.status(200).json({ message: "Producto borrado exitosamente" });
       } else {
         res.status(404).json({ message: "Error al borrar el producto" });
       }
